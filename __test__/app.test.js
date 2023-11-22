@@ -5,7 +5,6 @@ const { expect } = chai
 const mysql = require('mysql')
 let { app, db } = require('../app');
 const path = require("path")
-dotenv.config({ path: './.env'})
 
 chai.use(chaiHttp);
 

@@ -4,3 +4,4 @@ package-lock.json
 
 # Environment configuration
 .env
+DockerFile

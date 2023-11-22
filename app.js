@@ -3,7 +3,9 @@ const mysql = require("mysql")
 const dotenv = require('dotenv')
 
 const app = express();
-dotenv.config({ path: './.env' })
+//dotenv.config({ path: './.env' })
+
+console.log(process.env.DATABASE_PASSWORD)
 
 let dbConfig = {
     host: process.env.DATABASE_HOST,
