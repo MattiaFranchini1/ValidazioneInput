@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+</head>
+<body>
+
+{{!-- Navigation links --}}
+    <nav>
+        <br>
+        <h4 style="text-align: center;color: red;">Validazione dei dati in input</h4>
+    </nav>
+
+<center>
+<div class="container mt-4">
+        <div class="card" style="width: 25rem;">            
+            <div class="card-header">Register Form</div>    
+            <div class="card-body">
+                <form action="/auth/register" method="POST">
+                    <div class="mb-3">
+                        <label for="cf-reg" class="form-label">Codice fiscale</label>
+                        <input type="text" class="form-control" id="cf-reg" name="cf">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="email-reg" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email-reg" name="email">                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-reg" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password-reg" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-conf-reg" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="password-conf-reg" name="password_confirm">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+
+    {{#if message }}
+    <h4 class="alert mt-4" style="text-align: center;">{{message}}</h4>
+{{/if}}
+    {{!-- Body of each page will go here --}}
+</body>
+</html>
